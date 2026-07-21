@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/table.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Application Form</title>
+</head>
+<body>
+
+<h2>Application Form</h2>
+
+<form action="http://127.0.0.1:5500/submit" method="post">
+
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <input type="submit" value="submit">
+    <input type="reset" value="Clear">
+
+</form>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<form>
+
+
+    Gender:
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female<br><br>
+
+    Hobbies:
+    <input type="checkbox" name="hobby" value="Reading"> Reading
+    <input type="checkbox" name="hobby" value="Sports"> Sports<br><br>
+
+    Country:
+    <select>                                
+        <option>India</option>
+        <option>USA</option>
+        <option>Canada</option>
+    </select><br><br>
+
+    Address:<br>
+    <textarea rows="4" cols="30"></textarea><br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<form>
+ </form></body></html>
